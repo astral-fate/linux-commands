@@ -1,38 +1,11 @@
-# ! /bin/bash 
-
-#Reading text file and storing each line in array #initialising array 
-
-
-file_arr = ( ) 
-
-#using while loop to read the contents of file 
-
-while IFS = read -r line ;  do 
-
-#Storing in array the contents of the file line by line file_arr + = ( " $ line " ) 
-
-done </uploads/tma.txt
-
-uploading 
-
-
-  from 1 
-
-seq = 1
-
- #For loop is used to loop until there are values in array 
-
-
-for ( ( i = 0 ; i < $ { # file_arr [ @ ] } ; i ++ ) ); 
-
-
-do #prints the contents of array 
-
-echo " $ seq : $ { file_arr [ $ i ] } " ; 
-
- #sequence number is incremented
-
- seq = $ ( ( seq + 1 ) ) 
-
-
+#!/bin/bash 
+file_arr=() 
+while IFS = read -r line; do
+  file_arr+=("$line")
+done </uploads/TMA.txt
+seq=1
+for ((i=0; i<${#file_arr[@]}; i++ ));
+do 
+echo "$seq : ${file_arr[$i]}" 
+seq =$((seq+1)) 
 done
